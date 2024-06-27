@@ -37,18 +37,24 @@ void protocol_keyboard_task(void) {
 int main(void) __attribute__((weak));
 int main(void) {
     platform_setup();
+#if !defined(NO_USB)
     protocol_setup();
+#endif
     keyboard_setup();
 
+#if !defined(NO_USB)
     protocol_pre_init();
     keyboard_init();
     protocol_post_init();
+#endif
 
     /* Main loop */
     while (true) {
+#if !defined(NO_USB)
         protocol_pre_task();
         protocol_keyboard_task();
         protocol_post_task();
+#endif
 
 #ifdef RAW_ENABLE
         void raw_hid_task(void);

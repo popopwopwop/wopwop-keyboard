@@ -13,8 +13,8 @@
         "nkro": true
     },
     "matrix_pins": {
-        "cols": ["C2"],
-        "rows": ["D1"]
+        "cols": ["B0"],
+        "rows": ["B1"]
     },
     "processor": "STM32F103",
     "url": "",
@@ -24,7 +24,7 @@
         "vid": "0xFEED"
     },
     "layouts": {
-        "LAYOUT_ortho_1x1": {
+        "LAYOUT_all_purpose_dongle": {
             "layout": [
                 {"matrix": [0, 0], "x": 0, "y": 0}
             ]

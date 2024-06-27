@@ -1,0 +1,38 @@
+GNU Make 4.4.1
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Reading makefiles...
+Reading makefile 'Makefile'...
+QMK Firmware 0.25.8
+Reading makefile 'paths.mk' (search path) (no ~ expansion)...
+Reading makefile 'builddefs/message.mk' (search path) (no ~ expansion)...
+Updating makefiles....
+ Considering target file 'Makefile'.
+  Looking for an implicit rule for 'Makefile'.
+   Trying pattern rule '%:' with stem 'Makefile'.
+  Found implicit rule '%:' for 'Makefile'.
+ Finished prerequisites of target file 'Makefile'.
+ No need to remake target 'Makefile'.
+ Considering target file 'paths.mk'.
+  Looking for an implicit rule for 'paths.mk'.
+   Trying pattern rule '%:' with stem 'paths.mk'.
+  Found implicit rule '%:' for 'paths.mk'.
+ Finished prerequisites of target file 'paths.mk'.
+ No need to remake target 'paths.mk'.
+ Considering target file 'builddefs/message.mk'.
+  Looking for an implicit rule for 'builddefs/message.mk'.
+   Trying pattern rule '%:' with stem 'message.mk'.
+  Found implicit rule '%:' for 'builddefs/message.mk'.
+ Finished prerequisites of target file 'builddefs/message.mk'.
+ No need to remake target 'builddefs/message.mk'.
+Updating goal targets....
+Considering target file 'wopwop_dongle:default:flash'.
+ File 'wopwop_dongle:default:flash' does not exist.
+ Looking for an implicit rule for 'wopwop_dongle:default:flash'.
+  Trying pattern rule '%:' with stem 'wopwop_dongle:default:flash'.
+ Found implicit rule '%:' for 'wopwop_dongle:default:flash'.
+Finished prerequisites of target file 'wopwop_dongle:default:flash'.
+Must remake target 'wopwop_dongle:default:flash'.

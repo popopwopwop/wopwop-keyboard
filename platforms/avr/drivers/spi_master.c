@@ -49,7 +49,7 @@ void spi_init(void) {
     SPCR = (_BV(SPE) | _BV(MSTR));
 }
 
-bool spi_start(pin_t slavePin, bool lsbFirst, uint8_t mode, uint16_t divisor) {
+bool spi_start(pin_t slavePinNot, bool lsbFirst, uint8_t mode, uint16_t divisor) {
     if (currentSlavePin != NO_PIN || slavePin == NO_PIN) {
         return false;
     }

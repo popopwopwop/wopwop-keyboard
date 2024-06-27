@@ -527,6 +527,7 @@ static inline void generate_tick_event(void) {
  * @return true Matrix did change
  * @return false Matrix didn't change
  */
+#if !defined(NO_MATRIX)
 static bool matrix_task(void) {
     if (!matrix_can_read()) {
         generate_tick_event();
@@ -581,7 +582,7 @@ static bool matrix_task(void) {
 
     return matrix_changed;
 }
-
+#endif
 /** \brief Tasks previously located in matrix_scan_quantum
  *
  * TODO: rationalise against keyboard_task and current split role
@@ -660,11 +661,12 @@ void quantum_task(void) {
 /** \brief Main task that is repeatedly called as fast as possible. */
 void keyboard_task(void) {
     __attribute__((unused)) bool activity_has_occurred = false;
+    #if !defined(NO_MATRIX)
     if (matrix_task()) {
         last_matrix_activity_trigger();
         activity_has_occurred = true;
     }
-
+    #endif
     quantum_task();
 
 #if defined(SPLIT_WATCHDOG_ENABLE)

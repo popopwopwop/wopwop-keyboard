@@ -260,6 +260,12 @@ void post_process_record_quantum(keyrecord_t *record) {
     post_process_record_kb(keycode, record);
 }
 
+#ifdef No_MATRIX
+bool process_record_quantum(keyrecord_t *record) {
+    return false;
+}
+#else
+
 /* Core keycode function, hands off handling to other functions,
     then processes internal quantum keycodes, and then processes
     ACTIONs.                                                      */
@@ -485,6 +491,7 @@ bool process_record_quantum(keyrecord_t *record) {
 
     return process_action_kb(record);
 }
+#endif
 
 void set_single_persistent_default_layer(uint8_t default_layer) {
 #if defined(AUDIO_ENABLE) && defined(DEFAULT_LAYER_SONGS)
